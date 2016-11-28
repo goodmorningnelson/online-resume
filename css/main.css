@@ -62,3 +62,474 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+/* line 8, ../scss/main.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+}
+
+/* line 15, ../scss/main.scss */
+html {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+}
+/* line 21, ../scss/main.scss */
+html body {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+}
+/* line 33, ../scss/main.scss */
+html body .theBox.red {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 41, ../scss/main.scss */
+html body .theBox.red .smallBox {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+/* line 48, ../scss/main.scss */
+html body .theBox.red .smallBox:after {
+  content: 'base';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 768px) {
+  /* line 41, ../scss/main.scss */
+  html body .theBox.red .smallBox {
+    background-color: blue;
+  }
+  /* line 55, ../scss/main.scss */
+  html body .theBox.red .smallBox:after {
+    content: 'small';
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 41, ../scss/main.scss */
+  html body .theBox.red .smallBox {
+    background-color: yellow;
+  }
+  /* line 56, ../scss/main.scss */
+  html body .theBox.red .smallBox:after {
+    content: 'medium';
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 41, ../scss/main.scss */
+  html body .theBox.red .smallBox {
+    background-color: red;
+  }
+  /* line 57, ../scss/main.scss */
+  html body .theBox.red .smallBox:after {
+    content: 'big';
+  }
+}
+/* line 60, ../scss/main.scss */
+html body .theBox.red .headerBox {
+  width: 500px;
+  margin: 10px;
+  display: flex;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 60, ../scss/main.scss */
+  html body .theBox.red .headerBox {
+    width: 90vw;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 60, ../scss/main.scss */
+  html body .theBox.red .headerBox {
+    width: 800px;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 60, ../scss/main.scss */
+  html body .theBox.red .headerBox {
+    width: 1000px;
+    flex-direction: row;
+  }
+}
+/* line 72, ../scss/main.scss */
+html body .theBox.red .headerBox .nameBox {
+  border: 2px solid #B0F0EA;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 72, ../scss/main.scss */
+  html body .theBox.red .headerBox .nameBox {
+    width: 90vw;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 72, ../scss/main.scss */
+  html body .theBox.red .headerBox .nameBox {
+    width: 320px;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 72, ../scss/main.scss */
+  html body .theBox.red .headerBox .nameBox {
+    width: 320px;
+    height: 100px;
+  }
+}
+/* line 81, ../scss/main.scss */
+html body .theBox.red .headerBox .nameBox .name {
+  width: 100%;
+  height: 70%;
+  border-bottom: 2px solid #B0F0EA;
+}
+/* line 86, ../scss/main.scss */
+html body .theBox.red .headerBox .nameBox .title {
+  width: 100%;
+  height: 30%;
+}
+/* line 91, ../scss/main.scss */
+html body .theBox.red .headerBox .descriptionBox {
+  border-top: 2px solid #B0F0EA;
+  border-right: 2px solid #B0F0EA;
+  border-bottom: 2px solid #B0F0EA;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 91, ../scss/main.scss */
+  html body .theBox.red .headerBox .descriptionBox {
+    width: 90vw;
+    height: 100px;
+    border-top: 0px;
+    border-left: 2px solid #B0F0EA;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 91, ../scss/main.scss */
+  html body .theBox.red .headerBox .descriptionBox {
+    width: 480px;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 91, ../scss/main.scss */
+  html body .theBox.red .headerBox .descriptionBox {
+    width: 680px;
+    height: 100px;
+  }
+}
+/* line 104, ../scss/main.scss */
+html body .theBox.red .contentBox {
+  height: 400px;
+  background: blue;
+  margin: 10px;
+  display: flex;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 104, ../scss/main.scss */
+  html body .theBox.red .contentBox {
+    width: 90vw;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 104, ../scss/main.scss */
+  html body .theBox.red .contentBox {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 104, ../scss/main.scss */
+  html body .theBox.red .contentBox {
+    flex-direction: row;
+  }
+}
+/* line 118, ../scss/main.scss */
+html body .theBox.red .contentBox .infoBox {
+  height: 100%;
+  background: yellow;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 118, ../scss/main.scss */
+  html body .theBox.red .contentBox .infoBox {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 118, ../scss/main.scss */
+  html body .theBox.red .contentBox .infoBox {
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 118, ../scss/main.scss */
+  html body .theBox.red .contentBox .infoBox {
+    width: 320px;
+  }
+}
+/* line 128, ../scss/main.scss */
+html body .theBox.red .contentBox .workBox {
+  height: 100%;
+  background: green;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 128, ../scss/main.scss */
+  html body .theBox.red .contentBox .workBox {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 128, ../scss/main.scss */
+  html body .theBox.red .contentBox .workBox {
+    width: 480px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 128, ../scss/main.scss */
+  html body .theBox.red .contentBox .workBox {
+    width: 680px;
+  }
+}
+/* line 33, ../scss/main.scss */
+html body .theBox.yellow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 41, ../scss/main.scss */
+html body .theBox.yellow .smallBox {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+/* line 48, ../scss/main.scss */
+html body .theBox.yellow .smallBox:after {
+  content: 'base';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 768px) {
+  /* line 41, ../scss/main.scss */
+  html body .theBox.yellow .smallBox {
+    background-color: blue;
+  }
+  /* line 55, ../scss/main.scss */
+  html body .theBox.yellow .smallBox:after {
+    content: 'small';
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 41, ../scss/main.scss */
+  html body .theBox.yellow .smallBox {
+    background-color: yellow;
+  }
+  /* line 56, ../scss/main.scss */
+  html body .theBox.yellow .smallBox:after {
+    content: 'medium';
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 41, ../scss/main.scss */
+  html body .theBox.yellow .smallBox {
+    background-color: red;
+  }
+  /* line 57, ../scss/main.scss */
+  html body .theBox.yellow .smallBox:after {
+    content: 'big';
+  }
+}
+/* line 60, ../scss/main.scss */
+html body .theBox.yellow .headerBox {
+  width: 500px;
+  margin: 10px;
+  display: flex;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 60, ../scss/main.scss */
+  html body .theBox.yellow .headerBox {
+    width: 90vw;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 60, ../scss/main.scss */
+  html body .theBox.yellow .headerBox {
+    width: 800px;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 60, ../scss/main.scss */
+  html body .theBox.yellow .headerBox {
+    width: 1000px;
+    flex-direction: row;
+  }
+}
+/* line 72, ../scss/main.scss */
+html body .theBox.yellow .headerBox .nameBox {
+  border: 2px solid;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 72, ../scss/main.scss */
+  html body .theBox.yellow .headerBox .nameBox {
+    width: 90vw;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 72, ../scss/main.scss */
+  html body .theBox.yellow .headerBox .nameBox {
+    width: 320px;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 72, ../scss/main.scss */
+  html body .theBox.yellow .headerBox .nameBox {
+    width: 320px;
+    height: 100px;
+  }
+}
+/* line 81, ../scss/main.scss */
+html body .theBox.yellow .headerBox .nameBox .name {
+  width: 100%;
+  height: 70%;
+  border-bottom: 2px solid;
+}
+/* line 86, ../scss/main.scss */
+html body .theBox.yellow .headerBox .nameBox .title {
+  width: 100%;
+  height: 30%;
+}
+/* line 91, ../scss/main.scss */
+html body .theBox.yellow .headerBox .descriptionBox {
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 91, ../scss/main.scss */
+  html body .theBox.yellow .headerBox .descriptionBox {
+    width: 90vw;
+    height: 100px;
+    border-top: 0px;
+    border-left: 2px solid;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 91, ../scss/main.scss */
+  html body .theBox.yellow .headerBox .descriptionBox {
+    width: 480px;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 91, ../scss/main.scss */
+  html body .theBox.yellow .headerBox .descriptionBox {
+    width: 680px;
+    height: 100px;
+  }
+}
+/* line 104, ../scss/main.scss */
+html body .theBox.yellow .contentBox {
+  height: 400px;
+  background: blue;
+  margin: 10px;
+  display: flex;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 104, ../scss/main.scss */
+  html body .theBox.yellow .contentBox {
+    width: 90vw;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 104, ../scss/main.scss */
+  html body .theBox.yellow .contentBox {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 104, ../scss/main.scss */
+  html body .theBox.yellow .contentBox {
+    flex-direction: row;
+  }
+}
+/* line 118, ../scss/main.scss */
+html body .theBox.yellow .contentBox .infoBox {
+  height: 100%;
+  background: yellow;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 118, ../scss/main.scss */
+  html body .theBox.yellow .contentBox .infoBox {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 118, ../scss/main.scss */
+  html body .theBox.yellow .contentBox .infoBox {
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 118, ../scss/main.scss */
+  html body .theBox.yellow .contentBox .infoBox {
+    width: 320px;
+  }
+}
+/* line 128, ../scss/main.scss */
+html body .theBox.yellow .contentBox .workBox {
+  height: 100%;
+  background: green;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  /* line 128, ../scss/main.scss */
+  html body .theBox.yellow .contentBox .workBox {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  /* line 128, ../scss/main.scss */
+  html body .theBox.yellow .contentBox .workBox {
+    width: 480px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 128, ../scss/main.scss */
+  html body .theBox.yellow .contentBox .workBox {
+    width: 680px;
+  }
+}

@@ -1,0 +1,25 @@
+$break-mobile-min-width: 320px;
+$break-mobile-max-width: 768px;
+
+$break-tablet-min-width: 768px;
+$break-tablet-max-width: 1024px;
+
+$break-laptops-min-width: 1224px;
+
+$break-large-screen-min-width: 1824px;
+
+
+$break-small: 768px;
+$break-large: 1300px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}

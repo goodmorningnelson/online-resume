@@ -3,7 +3,142 @@
 
 @import "_typography";
 @import "_colors";
+@import "_responsive";
 
-body {
-  
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+
+  body {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+
+    @each $color-key, $color-variants in $app-colors {
+      $base-color: map-get($color-variants, "base");
+      $secondary-color: map-get($color-variants, "secondary");
+      $border-color: map-get($color-variants, "border");
+
+      .theBox {
+        &.#{$color-key} {
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .smallBox {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            &:after {
+              content: 'base';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+            }
+            @include respond-to(handhelds) { background-color: blue; &:after {content:'small'}}
+            @include respond-to(medium-screens) { background-color: yellow; &:after {content:'medium'}}
+            @include respond-to(wide-screens) { background-color: red; &:after {content:'big'}}
+          }
+
+          .headerBox {
+            width:500px;
+            margin: 10px;
+
+            display: flex;
+
+            transition: all 0.5s ease;
+
+            @include respond-to(handhelds) { width: 90vw;flex-direction: column;}
+            @include respond-to(medium-screens) { width: 800px;flex-direction: row;}
+            @include respond-to(wide-screens) { width: 1000px;flex-direction: row;}
+
+            .nameBox {
+              border: 2px solid $border-color;
+
+              transition: all 0.5s ease;
+
+              @include respond-to(handhelds) { width: 90vw;height: 100px;}
+              @include respond-to(medium-screens) { width: 320px;height: 100px;}
+              @include respond-to(wide-screens) { width: 320px;height: 100px;}
+
+              .name {
+                width: 100%;
+                height: 70%;
+                border-bottom: 2px solid $border-color
+              }
+              .title {
+                width: 100%;
+                height: 30%;
+              }
+            }
+            .descriptionBox {
+              border-top: 2px solid $border-color;
+              border-right: 2px solid $border-color;
+              border-bottom: 2px solid $border-color;
+
+              transition: all 0.5s ease;
+
+              @include respond-to(handhelds) { width: 90vw;height: 100px; border-top: 0px; border-left: 2px solid $border-color;}
+              @include respond-to(medium-screens) { width: 480px;height: 100px;}
+              @include respond-to(wide-screens) { width: 680px;height: 100px;}
+            }
+          }
+
+          .contentBox {
+            //width: 500px;
+            height: 400px;
+            background: blue;
+            margin: 10px;
+
+            display: flex;
+
+            transition: all 0.5s ease;
+
+            @include respond-to(handhelds) {width: 90vw; flex-direction: column;}
+            @include respond-to(medium-screens) {flex-direction: row;}
+            @include respond-to(wide-screens) {flex-direction: row;}
+
+            .infoBox {
+              height: 100%;
+              background: yellow;
+
+              transition: all 0.5s ease;
+
+              @include respond-to(handhelds) {width: 100%;}
+              @include respond-to(medium-screens) {width: 320px;}
+              @include respond-to(wide-screens) {width: 320px;}
+            }
+            .workBox {
+              height: 100%;
+              background: green;
+
+              transition: all 0.5s ease;
+
+              @include respond-to(handhelds) {width: 100%;}
+              @include respond-to(medium-screens) {width: 480px;}
+              @include respond-to(wide-screens) {width: 680px;}
+            }
+          }
+        }
+      }
+
+    }
+  }
 }
