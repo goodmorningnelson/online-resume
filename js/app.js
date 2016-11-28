@@ -1,10 +1,10 @@
 //need controller for things to work.
+angular.module('online-resume', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
 
-function TodoCtrl($scope) {
-    $scope.totalTodos = 4;
+angular.module('online-resume').controller('appCtrl',function ($scope) {
+    //angular media querry
+    $scope.infoItemModel1 = true;
+    $scope.infoItemModel2 = true;
 
-    $scope.todos = [
-      {text: 'learn AngularJS', done:false},
-      {text:'Build and app', done:false}
-    ];
-}
+    $scope.workItemModel1 = true;
+});
