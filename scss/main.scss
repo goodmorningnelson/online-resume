@@ -220,7 +220,7 @@ html {
                   margin-bottom: 10px;
                   background-color: #fff;
                   font-family: 'source code pro';
-                  color: saturate(shade($c-base-color, 5%),10%);
+                  color: saturate(shade($c-base-color, 10%),10%);
 
                   transition: all 0.5s linear;
 
@@ -239,7 +239,7 @@ html {
                       font-weight: 700;
                       padding: 4px 10px;
                       font-size: 13px;
-                      background-color: lighten(saturate(adjust-hue($c-base-color, 5.4545), 0.0000), 11.1765);
+                      background-color: lighten($c-base-color, 5%);
                     }
 
                     .title {
@@ -248,16 +248,18 @@ html {
                       font-weight: 700;
                       padding: 0px 10px;
                       font-size: 18px;
-                      background-color: lighten(saturate(adjust-hue($c-base-color, 5.8824), 0.0000), 14.1176);
+                      background-color: lighten($c-base-color, 10%);
+                      flex-shrink: 0;
                     }
                     .miniDescription {
                       height: 100%;
-                      width: 100%;
+                      //width: 100%;
                       font-weight: 400;
                       padding: 7px 10px;
                       font-size: 11px;
                       white-space: nowrap;
-                      background-color: lighten(saturate(adjust-hue($c-base-color, 6.0000), 0.0000), 18.2353);
+                      background-color: lighten($c-base-color, 20%);
+                      flex: auto;
 
                       &:after {
                         content: '';
@@ -265,11 +267,12 @@ html {
                         position: absolute;
                         right: 0;
                         top:0;
-                        width: 150px;
+                        width: 20%;
+                        max-width: 40px;
                         transform: translateX(-40px);
-                        background: -moz-linear-gradient(left,  transparentize(lighten(saturate(adjust-hue($c-base-color, 6.0000), 0.0000), 18.2353),1) 0%, lighten(saturate(adjust-hue($c-base-color, 6.0000), 0.0000), 18.2353) 100%); /* FF3.6-15 */
-                        background: -webkit-linear-gradient(left,  transparentize(lighten(saturate(adjust-hue($c-base-color, 6.0000), 0.0000), 18.2353),1) 0%,lighten(saturate(adjust-hue($c-base-color, 6.0000), 0.0000), 18.2353) 100%); /* Chrome10-25,Safari5.1-6 */
-                        background: linear-gradient(to right,  transparentize(lighten(saturate(adjust-hue($c-base-color, 6.0000), 0.0000), 18.2353),1) 0%,lighten(saturate(adjust-hue($c-base-color, 6.0000), 0.0000), 18.2353) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        background: -moz-linear-gradient(left,  transparentize(lighten($c-base-color, 20%),1) 0%, lighten($c-base-color, 20%) 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(left,  transparentize(lighten($c-base-color, 20%),1) 0%, lighten($c-base-color, 20%) 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(to right,  transparentize(lighten($c-base-color, 20%),1) 0%, lighten($c-base-color, 20%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
                         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 
                       }
@@ -317,6 +320,7 @@ html {
                     border-bottom: 2px solid $c-base-color;
                     border-left: 2px solid $c-base-color;
                     border-right: 2px solid $c-base-color;
+                    background-color: lighten($c-base-color, 35%);
                   }
 
                   .workItemHeading.active ~ .workItemBody {
