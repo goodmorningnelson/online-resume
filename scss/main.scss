@@ -10,7 +10,19 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-user-select: none;
+
+  //-webkit-user-select: none;
+
+  ::selection {
+    background: #75CDC5; /* WebKit/Blink Browsers */
+    color: #fff;
+  }
+  ::-moz-selection {
+    background: #75CDC5; /* Gecko Browsers */
+    color: #fff;
+  }
+
+  //outline: 2px solid blue;
 }
 
 html {
@@ -18,12 +30,15 @@ html {
   height: 100%;
   border: 0;
   margin: 0;
+  background-color: #EFFFFC;
 
   body {
     width: 100%;
-    height: 100%;
+    //height: 100%;
     border: 0;
     margin: 0;
+    overflow-x: hidden;
+    background-color: #EFFFFC;
 
     @each $color-key, $color-variants in $app-colors {
       $c-base-color: map-get($color-variants, "base");
@@ -34,8 +49,8 @@ html {
         &.#{$color-key} {
           width: 100%;
           height: 100%;
+          padding-bottom: 50px;
 
-          background-color: #FAFFFE;
 
           display: flex;
           flex-direction: column;
@@ -62,10 +77,11 @@ html {
 
           .headerBox {
             width:500px;
-            margin: 10px;
+            margin: 50px 0 15px 0;
             background-color: #fff;
 
             display: flex;
+            flex-shrink: 0;
 
             transition: all 0.5s ease;
 
@@ -85,17 +101,42 @@ html {
               .name {
                 width: 100%;
                 height: 70%;
-                border-bottom: 2px solid $c-border-color
+                border-bottom: 2px solid $c-border-color;
+                padding: 11px 21px;
+
+                h1 {
+                  font-family: 'source code pro';
+                  font-size: 39px;
+                  color: $c-font-color;
+                  font-weight: 700;
+                  word-spacing: -8px;
+                  margin: 0;
+                }
               }
               .title {
                 width: 100%;
                 height: 30%;
+                padding: 4px;
+
+                h2 {
+                  font-family: 'source code pro';
+                  font-size: 18px;
+                  color: $c-font-color;
+                  font-weight: 400;
+                  margin: 0;
+                  text-align: center;
+                }
               }
             }
             .descriptionBox {
               border-top: 2px solid $c-border-color;
               border-right: 2px solid $c-border-color;
               border-bottom: 2px solid $c-border-color;
+
+              padding: 14px 18px;
+              font-family: 'source code pro';
+              color: $c-font-color;
+              font-size: 12px;
 
               transition: all 0.5s ease;
 
@@ -186,6 +227,13 @@ html {
                   transition: opacity 0.5s linear;
                   border-left: 2px solid $c-border-color;
                   border-right: 2px solid $c-border-color;
+                  color: $c-font-color;
+                  font-family: 'source code pro';
+                  padding: 0;
+
+
+                  h3 {font-size: 16px; font-weight: 600; margin:18px 0 6px 0;}
+                  p {font-size: 15px; font-weight: 400; margin:0;}
 
                 }
 
@@ -194,6 +242,7 @@ html {
                   opacity: 1;
                   visibility: visible;
                   border-bottom: 2px solid $c-border-color;
+                  padding: 0 26px 20px 26px;
                 }
               }
             }
@@ -207,10 +256,10 @@ html {
               @include respond-to(medium-screens) {width: 480px;}
               @include respond-to(wide-screens) {width: 680px;}
 
-              @each $color-key, $color-variants in $app-colors {
-                $c-base-color: map-get($color-variants, "base");
-                $c-font-color: map-get($color-variants, "font");
-                $c-border-color: map-get($color-variants, "border");
+              @each $color-key, $color-variants in $project-colors {
+                $p-base-color: map-get($color-variants, "base");
+                $p-font-color: map-get($color-variants, "font");
+                $p-border-color: map-get($color-variants, "border");
 
               .workItem {
                 &.#{$color-key} {
@@ -220,7 +269,7 @@ html {
                   margin-bottom: 10px;
                   background-color: #fff;
                   font-family: 'source code pro';
-                  color: saturate(shade($c-base-color, 10%),10%);
+                  color: saturate(shade($p-base-color, 10%),10%);
 
                   transition: all 0.5s linear;
 
@@ -228,27 +277,27 @@ html {
                     position: relative;
                     height: 30px;
                     cursor: pointer;
-                    border: 2px solid $c-base-color;
+                    border: 2px solid $p-base-color;
                     overflow: hidden;
 
                     display: flex;
 
                     .date {
                       height: 100%;
-                      border-right: 2px solid $c-base-color;
+                      border-right: 2px solid $p-base-color;
                       font-weight: 700;
                       padding: 4px 10px;
                       font-size: 13px;
-                      background-color: lighten($c-base-color, 5%);
+                      background-color: lighten($p-base-color, 5%);
                     }
 
                     .title {
                       height: 100%;
-                      border-right: 2px solid $c-base-color;
+                      border-right: 2px solid $p-base-color;
                       font-weight: 700;
                       padding: 0px 10px;
                       font-size: 18px;
-                      background-color: lighten($c-base-color, 10%);
+                      background-color: lighten($p-base-color, 16%);
                       flex-shrink: 0;
                     }
                     .miniDescription {
@@ -258,7 +307,7 @@ html {
                       padding: 7px 10px;
                       font-size: 11px;
                       white-space: nowrap;
-                      background-color: lighten($c-base-color, 20%);
+                      background-color: lighten($p-base-color, 20%);
                       flex: auto;
 
                       &:after {
@@ -270,9 +319,9 @@ html {
                         width: 20%;
                         max-width: 40px;
                         transform: translateX(-40px);
-                        background: -moz-linear-gradient(left,  transparentize(lighten($c-base-color, 20%),1) 0%, lighten($c-base-color, 20%) 100%); /* FF3.6-15 */
-                        background: -webkit-linear-gradient(left,  transparentize(lighten($c-base-color, 20%),1) 0%, lighten($c-base-color, 20%) 100%); /* Chrome10-25,Safari5.1-6 */
-                        background: linear-gradient(to right,  transparentize(lighten($c-base-color, 20%),1) 0%, lighten($c-base-color, 20%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        background: -moz-linear-gradient(left,  transparentize(lighten($p-base-color, 20%),1) 0%, lighten($p-base-color, 20%) 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(left,  transparentize(lighten($p-base-color, 20%),1) 0%, lighten($p-base-color, 20%) 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(to right,  transparentize(lighten($p-base-color, 20%),1) 0%, lighten($p-base-color, 20%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
                         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 
                       }
@@ -282,14 +331,14 @@ html {
                       right: 0px;
                       height: 100%;
                       width: 40px;
-                      border-left: 2px solid $c-base-color;
-                      background-color: lighten(saturate(adjust-hue($c-base-color, 5.8824), 0.0000), 14.1176);
+                      border-left: 2px solid $p-base-color;
+                      background-color: lighten(saturate(adjust-hue($p-base-color, 5.8824), 0.0000), 14.1176);
 
                       .workItemHandle {
                         position: absolute;
                         width: 16px;
                         height: 2px;
-                        background-color: $c-base-color;
+                        background-color: $p-base-color;
                         top: 50%;
                         right: 12px;
                         transform: translateY(-50%);
@@ -302,7 +351,7 @@ html {
                         position: absolute;
                         top: 5px;
                         left: 17px;
-                        background: $c-base-color;
+                        background: $p-base-color;
                         transform: rotate(0);
 
                         transition: all 0.1s ease-in-out;
@@ -317,25 +366,236 @@ html {
                     opacity: 0;
                     visibility: hidden;
                     transition: opacity 0.5s linear;
-                    border-bottom: 2px solid $c-base-color;
-                    border-left: 2px solid $c-base-color;
-                    border-right: 2px solid $c-base-color;
-                    background-color: lighten($c-base-color, 35%);
+                    border-bottom: 2px solid $p-base-color;
+                    border-left: 2px solid $p-base-color;
+                    border-right: 2px solid $p-base-color;
+                    background-color: lighten($p-base-color, 35%);
+
+                    p {
+                      position: relative;
+                      font-size: 13px;
+                      margin: 0 0 3px 0;
+                      &:after {
+                        content:'+';
+                        position: absolute;
+                        left: -15px;
+                      }
+                    }
+                    .projectAccessBox {
+                      position: absolute;
+                      right: 0;
+                      bottom: 0;
+                      display: flex;
+                      flex-direction: column;
+                      width: 186px;
+                      border: 2px solid $p-base-color;
+
+                      @include respond-to(handhelds) {display: none;}
+
+                      .projectViewBtn {
+                        height: 30px;
+                        font-weight: 600;
+                        font-size: 12px;
+                        background-color: lighten($p-base-color, 18%);
+                        padding: 6px 0px 0px 38px;
+                        position: relative;
+                        cursor: pointer;
+
+                        &:nth-child(2) {
+                          border-top: 2px solid $p-base-color;;
+                        }
+
+                        &.website {
+                          svg {
+                            position: absolute;
+                            left: 7px;
+                            top: 3px;
+                            fill: $p-base-color;
+                          }
+                        }
+                        &.project {
+                          svg {
+                            position: absolute;
+                            left: 7px;
+                            top: 3px;
+                            fill: $p-base-color;
+                          }
+                        }
+                      }
+                    }
                   }
 
                   .workItemHeading.active ~ .workItemBody {
                     height: auto;
                     opacity: 1;
                     visibility: visible;
+                    padding: 16px 20px 10px 30px;
                   }
                 }
-              }
+                }
               }
             }
           }
+
+
+          .projectBoxOverlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(255,255,255,0.8);
+            transform: translateY(0%);
+            opacity: 1;
+
+            @include respond-to(handhelds) {display: none;}
+
+            -webkit-transition:all linear 0.5s;
+            transition:all linear 0.5s;
+
+            &.ng-enter.ng-enter-active, &.ng-hide-remove, &.ng-hide-add, &.ng-leave {
+              -webkit-animation: overlay-anim-enter 0.5s;
+              animation: overlay-anim-enter 0.5s;
+            }
+            &.ng-enter, &.ng-hide, &.ng-leave.ng-leave-active {
+              -webkit-animation: overlay-anim-leave 0.5s;
+              animation: overlay-anim-leave 0.5s;
+            }
+            @-webkit-keyframes overlay-anim-enter {
+              0% {transform: translateY(0%); opacity: 0;}
+              0.1% {transform: translateY(0%); opacity: 0;}
+              100% {transform: translateY(0%); opacity: 1;}
+            }
+            @keyframes overlay-anim-enter {
+              0% {transform: translateY(0%); opacity: 0;}
+              0.1% {transform: translateY(0%); opacity: 0;}
+              100% {transform: translateY(0%); opacity: 1;}
+            }
+            @-webkit-keyframes overlay-anim-leave {
+              0% {transform: translateY(0%); opacity: 1;}
+              99.9% {transform: translateY(0%); opacity: 0;}
+              100% {transform: translateY(-100%); opacity: 0;}
+            }
+            @keyframes overlay-anim-leave {
+              0% {transform: translateY(0%); opacity: 1;}
+              99.9% {transform: translateY(0%); opacity: 0;}
+              100% {transform: translateY(-100%); opacity: 0;}
+            }
+
+          }
+
+
+          @each $color-key, $color-variants in $project-colors {
+            $p-base-color: map-get($color-variants, "base");
+            $p-font-color: map-get($color-variants, "font");
+            $p-border-color: map-get($color-variants, "border");
+
+          .projectBox {
+            &.#{$color-key} {
+              position: absolute;
+              //width: 50vw;
+              height: 79vh;
+              right: 0;
+              top: 50%;
+              transform: translate(100%, -50%);
+              background-color: #fff;
+              border-top: 2px solid $p-base-color;
+              border-left: 2px solid $p-base-color;
+              border-bottom: 2px solid $p-base-color;
+              display: flex;
+              flex-direction: column;
+              overflow: hidden;
+
+              transition: all 0.4s ease-in-out;
+              -webkit-transition: all 0.4s ease-in-out;
+
+              @include respond-to(handhelds) {display: none;}
+              @include respond-to(medium-screens) {width: 60vw;}
+              @include respond-to(wide-screens) {width: 50vw;}
+
+              &.active {
+                transform: translate(0%, -50%);
+              }
+
+              .projectBoxHeading {
+                width: 100%;
+                height: 30px;
+                border-bottom: 2px solid $p-base-color;
+                position: relative;
+                background-color: lighten($p-base-color, 20%);
+                font-family: 'source code pro';
+                color: $p-base-color;
+                font-weight: 700;
+                padding: 0px 10px;
+                font-size: 18px;
+
+
+                .projectBoxCloseBtn {
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  height: 100%;
+                  width: 40px;
+                  border-left: 2px solid $p-base-color;
+                  background: lighten($p-base-color, 16%);
+                  cursor: pointer;
+
+                  svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    fill: $p-base-color;
+                  }
+
+                }
+
+              }
+              ::-webkit-scrollbar {
+                width: 40px;
+
+                //background-color: red;
+              }
+
+              ::-webkit-scrollbar-track {
+                background-color: lighten($p-base-color, 20%);
+                border-left: 2px solid $p-base-color;
+              }
+
+              ::-webkit-scrollbar-thumb {
+                background-color: lighten($p-base-color, 10%);
+                border-left: 2px solid $p-base-color;
+              }
+              .projectContent {
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 22px;
+                padding-bottom: 40px;
+                position: relative;
+
+
+                .projectElement {
+                  width: 70%;
+                  margin: 20px 0;
+                  font-family: 'source code pro';
+                  color: $p-base-color;
+                  font-size: 14px;
+                  text-align: center;
+                  position: relative;
+                  img {
+                    width: 100%;
+                    height: auto;
+                  }
+                }
+              }
+
+            }
+          }
+          }
         }
       }
-
     }
   }
 }

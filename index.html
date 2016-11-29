@@ -22,10 +22,16 @@
 
     <div class="headerBox">
       <div class="nameBox">
-        <div class="name"></div>
-        <div class="title"></div>
+        <div class="name">
+          <h1>Thomas Ruehr</h1>
+        </div>
+        <div class="title">
+          <h2>UI/UX designer</h2>
+        </div>
       </div>
-      <div class="descriptionBox"></div>
+      <div class="descriptionBox">
+        French/american graphic designer with a passion for design. Avid learner and tech-entousiast. Young, fast and curious, I like to follow a project from its original concept to its graphical realisation taking at heart all the technical aspects related to it. I love the puzzles that come with each ideas.
+      </div>
     </div>
 
     <div class="contentBox">
@@ -36,13 +42,21 @@
             <div class="infoItemHandle"></div>
           </div>
           <div class="infoItemBody">
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
+            <h3>Design Tools:</h3>
+            <p>Sketch</p>
+            <p>Photoshop</p>
+            <p>Illustrator</p>
+            <p>InDesign</p>
+            <p>After Effect</p>
+            <h3>Frontend development, basic web programming languages and preprocessors :</h3>
+            <p>Html (Jade/pug) / CSS (SCSS)</p>
+            <p>Base Knowledge of AngularJS.</p>
+            <h3>Project Management and Version Control :</h3>
+            <p>GitHub / GitLab / GitKraken</p>
+            <h3>Team Communication:</h3>
+            <p>Slack / Muraly</p>
+            <h3>Prototyping:</h3>
+            <p>proto.io / Invision</p>
           </div>
 
         </div>
@@ -52,33 +66,56 @@
             <div class="infoItemHandle"></div>
           </div>
           <div class="infoItemBody">
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-
+            <h3>• 2014</h3>
+            <p>Advanced Bachelor in Graphique Design and Art Direction.</br> EPSAA - École Professionnelle Supérieure d’Arts et d’Architecture de la Ville de Paris </p>
+            <h3>• 2012</h3>
+            <p>ChildCare Worker Certification. </br>«Brevet d’aptitude aux fonctions d’animateur» (BAFA)</p>
+            <h3>• 2009 </h3>
+            <p>French Baccalauréat </br>Specialised in Social Studies and Economy. </br>Honorable Mention.</p>
           </div>
 
         </div>
       </div>
       <div class="workBox">
+
+<!-- kapsuli start -->
+
         <div class="workItem kapsuli">
           <div class="workItemHeading" ng-model="workItemModel1" uib-btn-checkbox >
             <div class="date">2015/2016</div>
             <div class="title">Kapsuli</div>
             <div class="miniDescription">Social media tool for twitch broadcasters</div>
             <div class="workItemHandleBox">
-              <div class="workItemHandle">
-
-              </div>
+              <div class="workItemHandle"></div>
             </div>
           </div>
           <div class="workItemBody">
-            <p>hello</p>
-            <p>hello</p>
+            <p>Front-End development</p>
+            <p>Market Research</p>
+            <p>User Experience interviews and analysis (hotjar)</p>
+            <p>Social Media management and asset creation</p>
+            <p>User Interface design</p>
+            <p>Media Campaign Design</p>
+            <p>Worflow protocol implementation</p>
+            <div class="projectAccessBox">
+              <div class="projectViewBtn website">Access Website
+                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                </svg>
+              </div>
+              <div class="projectViewBtn project" ng-model="projectKapsuliModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
+                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
+
+<!-- kapsuli end -->
+
         <div class="workItem blue">
           <div class="workItemHeading" ng-model="workItemModel2" uib-btn-checkbox >
             <div class="date">2015</div>
@@ -108,14 +145,35 @@
           </div>
           <div class="workItemBody">
             <p>hello</p>
-            <p>hello</p>
           </div>
         </div>
       </div>
     </div>
 
+<!-- project view boxes -->
+
+    <div class="projectBoxOverlay" ng-show="projectKapsuliModel === 1" ng-click="projectKapsuliModel = 0"></div>
+    <div class="projectBox kapsuli" ng-class="{'active': projectKapsuliModel === 1}">
+      <div class="projectBoxHeading"> Kapsuli
+        <div class="projectBoxCloseBtn" ng-click="projectKapsuliModel = 0">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="projectElement">
+          This project is awsome, hell yeah, I did it on my own, Imma boss :D
+        </div>
+        <div class="projectElement">
+          <img src="./img/oje7.jpg" alt="">
+        </div>
+      </div>
+
+
+    </div>
 
   </div>
 </body>
-
 </html>
