@@ -98,9 +98,12 @@ html body {
   border: 0;
   margin: 0;
   overflow-x: hidden;
-  background-color: #EFFFFC;
+  background-color: #edfffd;
+  background-image: radial-gradient(#b0f0ea 9%, rgba(0, 0, 0, 0) 9%), radial-gradient(#b0f0ea 9%, rgba(0, 0, 0, 0) 9%);
+  background-size: 20px 20px;
+  background-position: 0 0, 20px 20px;
 }
-/* line 49, ../scss/main.scss */
+/* line 53, ../scss/main.scss */
 html body .theBox.base {
   width: 100%;
   height: 100%;
@@ -109,7 +112,7 @@ html body .theBox.base {
   flex-direction: column;
   align-items: center;
 }
-/* line 59, ../scss/main.scss */
+/* line 63, ../scss/main.scss */
 html body .theBox.base .smallBox {
   width: 100px;
   height: 100px;
@@ -117,7 +120,7 @@ html body .theBox.base .smallBox {
   top: 20px;
   left: 20px;
 }
-/* line 66, ../scss/main.scss */
+/* line 70, ../scss/main.scss */
 html body .theBox.base .smallBox:after {
   content: 'base';
   position: absolute;
@@ -126,36 +129,36 @@ html body .theBox.base .smallBox:after {
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 768px) {
-  /* line 59, ../scss/main.scss */
+  /* line 63, ../scss/main.scss */
   html body .theBox.base .smallBox {
     background-color: blue;
   }
-  /* line 73, ../scss/main.scss */
+  /* line 77, ../scss/main.scss */
   html body .theBox.base .smallBox:after {
     content: 'small';
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 59, ../scss/main.scss */
+  /* line 63, ../scss/main.scss */
   html body .theBox.base .smallBox {
     background-color: yellow;
   }
-  /* line 74, ../scss/main.scss */
+  /* line 78, ../scss/main.scss */
   html body .theBox.base .smallBox:after {
     content: 'medium';
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 59, ../scss/main.scss */
+  /* line 63, ../scss/main.scss */
   html body .theBox.base .smallBox {
     background-color: red;
   }
-  /* line 75, ../scss/main.scss */
+  /* line 79, ../scss/main.scss */
   html body .theBox.base .smallBox:after {
     content: 'big';
   }
 }
-/* line 78, ../scss/main.scss */
+/* line 82, ../scss/main.scss */
 html body .theBox.base .headerBox {
   width: 500px;
   margin: 50px 0 15px 0;
@@ -165,60 +168,60 @@ html body .theBox.base .headerBox {
   transition: all 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
-  /* line 78, ../scss/main.scss */
+  /* line 82, ../scss/main.scss */
   html body .theBox.base .headerBox {
     width: 90vw;
     flex-direction: column;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 78, ../scss/main.scss */
+  /* line 82, ../scss/main.scss */
   html body .theBox.base .headerBox {
     width: 815px;
     flex-direction: row;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 78, ../scss/main.scss */
+  /* line 82, ../scss/main.scss */
   html body .theBox.base .headerBox {
     width: 1015px;
     flex-direction: row;
   }
 }
-/* line 92, ../scss/main.scss */
+/* line 96, ../scss/main.scss */
 html body .theBox.base .headerBox .nameBox {
   border: 2px solid #B0F0EA;
   transition: all 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
-  /* line 92, ../scss/main.scss */
+  /* line 96, ../scss/main.scss */
   html body .theBox.base .headerBox .nameBox {
     width: 90vw;
     height: 100px;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 92, ../scss/main.scss */
+  /* line 96, ../scss/main.scss */
   html body .theBox.base .headerBox .nameBox {
     width: 320px;
     height: 100px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 92, ../scss/main.scss */
+  /* line 96, ../scss/main.scss */
   html body .theBox.base .headerBox .nameBox {
     width: 320px;
     height: 100px;
   }
 }
-/* line 101, ../scss/main.scss */
+/* line 105, ../scss/main.scss */
 html body .theBox.base .headerBox .nameBox .name {
   width: 100%;
   height: 70%;
   border-bottom: 2px solid #B0F0EA;
   padding: 11px 21px;
 }
-/* line 107, ../scss/main.scss */
+/* line 111, ../scss/main.scss */
 html body .theBox.base .headerBox .nameBox .name h1 {
   font-family: 'source code pro';
   font-size: 39px;
@@ -226,23 +229,29 @@ html body .theBox.base .headerBox .nameBox .name h1 {
   font-weight: 700;
   word-spacing: -8px;
   margin: 0;
+  text-align: center;
 }
-/* line 116, ../scss/main.scss */
+/* line 121, ../scss/main.scss */
 html body .theBox.base .headerBox .nameBox .title {
   width: 100%;
   height: 30%;
-  padding: 4px;
+  position: relative;
 }
-/* line 121, ../scss/main.scss */
+/* line 126, ../scss/main.scss */
 html body .theBox.base .headerBox .nameBox .title h2 {
   font-family: 'source code pro';
-  font-size: 18px;
+  font-size: 90%;
   color: #9de4de;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
   text-align: center;
+  position: absolute;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-/* line 131, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 html body .theBox.base .headerBox .descriptionBox {
   border-top: 2px solid #B0F0EA;
   border-right: 2px solid #B0F0EA;
@@ -254,7 +263,7 @@ html body .theBox.base .headerBox .descriptionBox {
   transition: all 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
-  /* line 131, ../scss/main.scss */
+  /* line 141, ../scss/main.scss */
   html body .theBox.base .headerBox .descriptionBox {
     width: 90vw;
     height: 100px;
@@ -263,67 +272,67 @@ html body .theBox.base .headerBox .descriptionBox {
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 131, ../scss/main.scss */
+  /* line 141, ../scss/main.scss */
   html body .theBox.base .headerBox .descriptionBox {
     width: 495px;
     height: 100px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 131, ../scss/main.scss */
+  /* line 141, ../scss/main.scss */
   html body .theBox.base .headerBox .descriptionBox {
     width: 695px;
     height: 100px;
   }
 }
-/* line 149, ../scss/main.scss */
+/* line 159, ../scss/main.scss */
 html body .theBox.base .contentBox {
   display: flex;
   transition: all 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
-  /* line 149, ../scss/main.scss */
+  /* line 159, ../scss/main.scss */
   html body .theBox.base .contentBox {
     width: 90vw;
     flex-direction: column;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 149, ../scss/main.scss */
+  /* line 159, ../scss/main.scss */
   html body .theBox.base .contentBox {
     flex-direction: row;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 149, ../scss/main.scss */
+  /* line 159, ../scss/main.scss */
   html body .theBox.base .contentBox {
     flex-direction: row;
   }
 }
-/* line 163, ../scss/main.scss */
+/* line 173, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox {
   margin-right: 15px;
   transition: all 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
-  /* line 163, ../scss/main.scss */
+  /* line 173, ../scss/main.scss */
   html body .theBox.base .contentBox .infoBox {
     width: 100%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 163, ../scss/main.scss */
+  /* line 173, ../scss/main.scss */
   html body .theBox.base .contentBox .infoBox {
     width: 320px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 163, ../scss/main.scss */
+  /* line 173, ../scss/main.scss */
   html body .theBox.base .contentBox .infoBox {
     width: 320px;
   }
 }
-/* line 174, ../scss/main.scss */
+/* line 184, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem {
   position: relative;
   width: 100%;
@@ -332,14 +341,14 @@ html body .theBox.base .contentBox .infoBox .infoItem {
   background-color: #fff;
   transition: all 0.5s linear;
 }
-/* line 183, ../scss/main.scss */
+/* line 193, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading {
   position: relative;
   height: 30px;
   cursor: pointer;
   border: 2px solid #B0F0EA;
 }
-/* line 189, ../scss/main.scss */
+/* line 199, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading .infoItemTitle {
   font-family: 'source code pro';
   font-weight: 700;
@@ -349,7 +358,7 @@ html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading .infoItem
   left: 12px;
   color: #9de4de;
 }
-/* line 198, ../scss/main.scss */
+/* line 208, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading .infoItemHandle {
   position: absolute;
   width: 16px;
@@ -359,7 +368,7 @@ html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading .infoItem
   right: 12px;
   transform: translateY(-50%);
 }
-/* line 207, ../scss/main.scss */
+/* line 217, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading .infoItemHandle:after {
   content: '';
   width: 2px;
@@ -371,11 +380,11 @@ html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading .infoItem
   transform: rotate(0);
   transition: all 0.1s ease-in-out;
 }
-/* line 220, ../scss/main.scss */
+/* line 230, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading.active .infoItemHandle:after {
   transform: rotate(90deg);
 }
-/* line 222, ../scss/main.scss */
+/* line 232, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem .infoItemBody {
   height: 0px;
   overflow: hidden;
@@ -388,19 +397,19 @@ html body .theBox.base .contentBox .infoBox .infoItem .infoItemBody {
   font-family: 'source code pro';
   padding: 0;
 }
-/* line 235, ../scss/main.scss */
+/* line 245, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem .infoItemBody h3 {
   font-size: 16px;
   font-weight: 600;
   margin: 18px 0 6px 0;
 }
-/* line 236, ../scss/main.scss */
+/* line 246, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem .infoItemBody p {
   font-size: 15px;
   font-weight: 400;
   margin: 0;
 }
-/* line 240, ../scss/main.scss */
+/* line 250, ../scss/main.scss */
 html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading.active ~ .infoItemBody {
   height: auto;
   opacity: 1;
@@ -408,30 +417,30 @@ html body .theBox.base .contentBox .infoBox .infoItem .infoItemHeading.active ~ 
   border-bottom: 2px solid #B0F0EA;
   padding: 0 26px 20px 26px;
 }
-/* line 249, ../scss/main.scss */
+/* line 259, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox {
   height: 100%;
   transition: all 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
-  /* line 249, ../scss/main.scss */
+  /* line 259, ../scss/main.scss */
   html body .theBox.base .contentBox .workBox {
     width: 100%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 249, ../scss/main.scss */
+  /* line 259, ../scss/main.scss */
   html body .theBox.base .contentBox .workBox {
     width: 480px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 249, ../scss/main.scss */
+  /* line 259, ../scss/main.scss */
   html body .theBox.base .contentBox .workBox {
     width: 680px;
   }
 }
-/* line 265, ../scss/main.scss */
+/* line 275, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue {
   position: relative;
   width: 100%;
@@ -442,7 +451,7 @@ html body .theBox.base .contentBox .workBox .workItem.blue {
   color: #3f7cbc;
   transition: all 0.5s linear;
 }
-/* line 276, ../scss/main.scss */
+/* line 286, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading {
   position: relative;
   height: 30px;
@@ -451,7 +460,7 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading {
   overflow: hidden;
   display: flex;
 }
-/* line 285, ../scss/main.scss */
+/* line 295, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .date {
   height: 100%;
   border-right: 2px solid #538AC2;
@@ -460,7 +469,7 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .dat
   font-size: 13px;
   background-color: #6697c9;
 }
-/* line 294, ../scss/main.scss */
+/* line 304, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .title {
   height: 100%;
   border-right: 2px solid #538AC2;
@@ -470,7 +479,7 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .tit
   background-color: #8fb3d7;
   flex-shrink: 0;
 }
-/* line 303, ../scss/main.scss */
+/* line 313, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .miniDescription {
   height: 100%;
   font-weight: 400;
@@ -480,7 +489,7 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .min
   background-color: #9ebddd;
   flex: auto;
 }
-/* line 313, ../scss/main.scss */
+/* line 323, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .miniDescription:after {
   content: '';
   height: 100%;
@@ -499,7 +508,7 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .min
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
   /* IE6-9 */
 }
-/* line 329, ../scss/main.scss */
+/* line 339, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .workItemHandleBox {
   position: absolute;
   right: 0px;
@@ -508,7 +517,7 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .wor
   border-left: 2px solid #538AC2;
   background-color: #88a7d5;
 }
-/* line 337, ../scss/main.scss */
+/* line 347, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .workItemHandleBox .workItemHandle {
   position: absolute;
   width: 16px;
@@ -518,7 +527,7 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .wor
   right: 12px;
   transform: translateY(-50%);
 }
-/* line 347, ../scss/main.scss */
+/* line 357, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .workItemHandleBox:after {
   content: '';
   width: 2px;
@@ -530,11 +539,11 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading .wor
   transform: rotate(0);
   transition: all 0.1s ease-in-out;
 }
-/* line 360, ../scss/main.scss */
+/* line 370, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading.active .workItemHandleBox:after {
   transform: rotate(90deg);
 }
-/* line 363, ../scss/main.scss */
+/* line 373, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody {
   height: 0px;
   overflow: hidden;
@@ -546,19 +555,19 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody {
   border-right: 2px solid #538AC2;
   background-color: #d7e4f1;
 }
-/* line 374, ../scss/main.scss */
+/* line 384, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody p {
   position: relative;
   font-size: 13px;
   margin: 0 0 3px 0;
 }
-/* line 378, ../scss/main.scss */
+/* line 388, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody p:after {
   content: '+';
   position: absolute;
   left: -15px;
 }
-/* line 384, ../scss/main.scss */
+/* line 394, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody .projectAccessBox {
   position: absolute;
   right: 0;
@@ -569,12 +578,12 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody .projec
   border: 2px solid #538AC2;
 }
 @media only screen and (max-width: 768px) {
-  /* line 384, ../scss/main.scss */
+  /* line 394, ../scss/main.scss */
   html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody .projectAccessBox {
     display: none;
   }
 }
-/* line 395, ../scss/main.scss */
+/* line 405, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody .projectAccessBox .projectViewBtn {
   height: 30px;
   font-weight: 600;
@@ -584,32 +593,32 @@ html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody .projec
   position: relative;
   cursor: pointer;
 }
-/* line 404, ../scss/main.scss */
+/* line 414, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody .projectAccessBox .projectViewBtn:nth-child(2) {
   border-top: 2px solid #538AC2;
 }
-/* line 409, ../scss/main.scss */
+/* line 419, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody .projectAccessBox .projectViewBtn.website svg {
   position: absolute;
   left: 7px;
   top: 3px;
   fill: #538AC2;
 }
-/* line 417, ../scss/main.scss */
+/* line 427, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemBody .projectAccessBox .projectViewBtn.project svg {
   position: absolute;
   left: 7px;
   top: 3px;
   fill: #538AC2;
 }
-/* line 428, ../scss/main.scss */
+/* line 438, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.blue .workItemHeading.active ~ .workItemBody {
   height: auto;
   opacity: 1;
   visibility: visible;
   padding: 16px 20px 10px 30px;
 }
-/* line 265, ../scss/main.scss */
+/* line 275, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green {
   position: relative;
   width: 100%;
@@ -620,7 +629,7 @@ html body .theBox.base .contentBox .workBox .workItem.green {
   color: #41ce82;
   transition: all 0.5s linear;
 }
-/* line 276, ../scss/main.scss */
+/* line 286, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading {
   position: relative;
   height: 30px;
@@ -629,7 +638,7 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading {
   overflow: hidden;
   display: flex;
 }
-/* line 285, ../scss/main.scss */
+/* line 295, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .date {
   height: 100%;
   border-right: 2px solid #56D791;
@@ -638,7 +647,7 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .da
   font-size: 13px;
   background-color: #6bdc9e;
 }
-/* line 294, ../scss/main.scss */
+/* line 304, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .title {
   height: 100%;
   border-right: 2px solid #56D791;
@@ -648,7 +657,7 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .ti
   background-color: #98e7bc;
   flex-shrink: 0;
 }
-/* line 303, ../scss/main.scss */
+/* line 313, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .miniDescription {
   height: 100%;
   font-weight: 400;
@@ -658,7 +667,7 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .mi
   background-color: #a8ebc7;
   flex: auto;
 }
-/* line 313, ../scss/main.scss */
+/* line 323, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .miniDescription:after {
   content: '';
   height: 100%;
@@ -677,7 +686,7 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .mi
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
   /* IE6-9 */
 }
-/* line 329, ../scss/main.scss */
+/* line 339, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .workItemHandleBox {
   position: absolute;
   right: 0px;
@@ -686,7 +695,7 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .wo
   border-left: 2px solid #56D791;
   background-color: #90e5bf;
 }
-/* line 337, ../scss/main.scss */
+/* line 347, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .workItemHandleBox .workItemHandle {
   position: absolute;
   width: 16px;
@@ -696,7 +705,7 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .wo
   right: 12px;
   transform: translateY(-50%);
 }
-/* line 347, ../scss/main.scss */
+/* line 357, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .workItemHandleBox:after {
   content: '';
   width: 2px;
@@ -708,11 +717,11 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading .wo
   transform: rotate(0);
   transition: all 0.1s ease-in-out;
 }
-/* line 360, ../scss/main.scss */
+/* line 370, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading.active .workItemHandleBox:after {
   transform: rotate(90deg);
 }
-/* line 363, ../scss/main.scss */
+/* line 373, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemBody {
   height: 0px;
   overflow: hidden;
@@ -724,19 +733,19 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemBody {
   border-right: 2px solid #56D791;
   background-color: #e6f9ef;
 }
-/* line 374, ../scss/main.scss */
+/* line 384, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemBody p {
   position: relative;
   font-size: 13px;
   margin: 0 0 3px 0;
 }
-/* line 378, ../scss/main.scss */
+/* line 388, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemBody p:after {
   content: '+';
   position: absolute;
   left: -15px;
 }
-/* line 384, ../scss/main.scss */
+/* line 394, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemBody .projectAccessBox {
   position: absolute;
   right: 0;
@@ -747,12 +756,12 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemBody .proje
   border: 2px solid #56D791;
 }
 @media only screen and (max-width: 768px) {
-  /* line 384, ../scss/main.scss */
+  /* line 394, ../scss/main.scss */
   html body .theBox.base .contentBox .workBox .workItem.green .workItemBody .projectAccessBox {
     display: none;
   }
 }
-/* line 395, ../scss/main.scss */
+/* line 405, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemBody .projectAccessBox .projectViewBtn {
   height: 30px;
   font-weight: 600;
@@ -762,32 +771,32 @@ html body .theBox.base .contentBox .workBox .workItem.green .workItemBody .proje
   position: relative;
   cursor: pointer;
 }
-/* line 404, ../scss/main.scss */
+/* line 414, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemBody .projectAccessBox .projectViewBtn:nth-child(2) {
   border-top: 2px solid #56D791;
 }
-/* line 409, ../scss/main.scss */
+/* line 419, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemBody .projectAccessBox .projectViewBtn.website svg {
   position: absolute;
   left: 7px;
   top: 3px;
   fill: #56D791;
 }
-/* line 417, ../scss/main.scss */
+/* line 427, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemBody .projectAccessBox .projectViewBtn.project svg {
   position: absolute;
   left: 7px;
   top: 3px;
   fill: #56D791;
 }
-/* line 428, ../scss/main.scss */
+/* line 438, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.green .workItemHeading.active ~ .workItemBody {
   height: auto;
   opacity: 1;
   visibility: visible;
   padding: 16px 20px 10px 30px;
 }
-/* line 265, ../scss/main.scss */
+/* line 275, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli {
   position: relative;
   width: 100%;
@@ -798,7 +807,7 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli {
   color: #ee6f6f;
   transition: all 0.5s linear;
 }
-/* line 276, ../scss/main.scss */
+/* line 286, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading {
   position: relative;
   height: 30px;
@@ -807,7 +816,7 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading {
   overflow: hidden;
   display: flex;
 }
-/* line 285, ../scss/main.scss */
+/* line 295, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .date {
   height: 100%;
   border-right: 2px solid #FF8484;
@@ -816,7 +825,7 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .
   font-size: 13px;
   background-color: #ff9e9e;
 }
-/* line 294, ../scss/main.scss */
+/* line 304, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .title {
   height: 100%;
   border-right: 2px solid #FF8484;
@@ -826,7 +835,7 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .
   background-color: #ffd6d6;
   flex-shrink: 0;
 }
-/* line 303, ../scss/main.scss */
+/* line 313, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .miniDescription {
   height: 100%;
   font-weight: 400;
@@ -836,7 +845,7 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .
   background-color: #ffeaea;
   flex: auto;
 }
-/* line 313, ../scss/main.scss */
+/* line 323, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .miniDescription:after {
   content: '';
   height: 100%;
@@ -855,7 +864,7 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
   /* IE6-9 */
 }
-/* line 329, ../scss/main.scss */
+/* line 339, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .workItemHandleBox {
   position: absolute;
   right: 0px;
@@ -864,7 +873,7 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .
   border-left: 2px solid #FF8484;
   background-color: #ffd1cc;
 }
-/* line 337, ../scss/main.scss */
+/* line 347, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .workItemHandleBox .workItemHandle {
   position: absolute;
   width: 16px;
@@ -874,7 +883,7 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .
   right: 12px;
   transform: translateY(-50%);
 }
-/* line 347, ../scss/main.scss */
+/* line 357, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .workItemHandleBox:after {
   content: '';
   width: 2px;
@@ -886,11 +895,11 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading .
   transform: rotate(0);
   transition: all 0.1s ease-in-out;
 }
-/* line 360, ../scss/main.scss */
+/* line 370, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading.active .workItemHandleBox:after {
   transform: rotate(90deg);
 }
-/* line 363, ../scss/main.scss */
+/* line 373, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody {
   height: 0px;
   overflow: hidden;
@@ -902,19 +911,19 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody {
   border-right: 2px solid #FF8484;
   background-color: white;
 }
-/* line 374, ../scss/main.scss */
+/* line 384, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody p {
   position: relative;
   font-size: 13px;
   margin: 0 0 3px 0;
 }
-/* line 378, ../scss/main.scss */
+/* line 388, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody p:after {
   content: '+';
   position: absolute;
   left: -15px;
 }
-/* line 384, ../scss/main.scss */
+/* line 394, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody .projectAccessBox {
   position: absolute;
   right: 0;
@@ -925,12 +934,12 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody .pro
   border: 2px solid #FF8484;
 }
 @media only screen and (max-width: 768px) {
-  /* line 384, ../scss/main.scss */
+  /* line 394, ../scss/main.scss */
   html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody .projectAccessBox {
     display: none;
   }
 }
-/* line 395, ../scss/main.scss */
+/* line 405, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody .projectAccessBox .projectViewBtn {
   height: 30px;
   font-weight: 600;
@@ -940,36 +949,36 @@ html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody .pro
   position: relative;
   cursor: pointer;
 }
-/* line 404, ../scss/main.scss */
+/* line 414, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody .projectAccessBox .projectViewBtn:nth-child(2) {
   border-top: 2px solid #FF8484;
 }
-/* line 409, ../scss/main.scss */
+/* line 419, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody .projectAccessBox .projectViewBtn.website svg {
   position: absolute;
   left: 7px;
   top: 3px;
   fill: #FF8484;
 }
-/* line 417, ../scss/main.scss */
+/* line 427, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemBody .projectAccessBox .projectViewBtn.project svg {
   position: absolute;
   left: 7px;
   top: 3px;
   fill: #FF8484;
 }
-/* line 428, ../scss/main.scss */
+/* line 438, ../scss/main.scss */
 html body .theBox.base .contentBox .workBox .workItem.kapsuli .workItemHeading.active ~ .workItemBody {
   height: auto;
   opacity: 1;
   visibility: visible;
   padding: 16px 20px 10px 30px;
 }
-/* line 441, ../scss/main.scss */
+/* line 451, ../scss/main.scss */
 html body .theBox.base .projectBoxOverlay {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   background-color: rgba(255, 255, 255, 0.8);
   transform: translateY(0%);
   opacity: 1;
@@ -977,17 +986,17 @@ html body .theBox.base .projectBoxOverlay {
   transition: all linear 0.5s;
 }
 @media only screen and (max-width: 768px) {
-  /* line 441, ../scss/main.scss */
+  /* line 451, ../scss/main.scss */
   html body .theBox.base .projectBoxOverlay {
     display: none;
   }
 }
-/* line 454, ../scss/main.scss */
+/* line 464, ../scss/main.scss */
 html body .theBox.base .projectBoxOverlay.ng-enter.ng-enter-active, html body .theBox.base .projectBoxOverlay.ng-hide-remove, html body .theBox.base .projectBoxOverlay.ng-hide-add, html body .theBox.base .projectBoxOverlay.ng-leave {
   -webkit-animation: overlay-anim-enter 0.5s;
   animation: overlay-anim-enter 0.5s;
 }
-/* line 458, ../scss/main.scss */
+/* line 468, ../scss/main.scss */
 html body .theBox.base .projectBoxOverlay.ng-enter, html body .theBox.base .projectBoxOverlay.ng-hide, html body .theBox.base .projectBoxOverlay.ng-leave.ng-leave-active {
   -webkit-animation: overlay-anim-leave 0.5s;
   animation: overlay-anim-leave 0.5s;
@@ -1048,9 +1057,9 @@ html body .theBox.base .projectBoxOverlay.ng-enter, html body .theBox.base .proj
     opacity: 0;
   }
 }
-/* line 492, ../scss/main.scss */
+/* line 502, ../scss/main.scss */
 html body .theBox.base .projectBox.blue {
-  position: absolute;
+  position: fixed;
   height: 79vh;
   right: 0;
   top: 50%;
@@ -1066,28 +1075,28 @@ html body .theBox.base .projectBox.blue {
   -webkit-transition: all 0.4s ease-in-out;
 }
 @media only screen and (max-width: 768px) {
-  /* line 492, ../scss/main.scss */
+  /* line 502, ../scss/main.scss */
   html body .theBox.base .projectBox.blue {
     display: none;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 492, ../scss/main.scss */
+  /* line 502, ../scss/main.scss */
   html body .theBox.base .projectBox.blue {
     width: 60vw;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 492, ../scss/main.scss */
+  /* line 502, ../scss/main.scss */
   html body .theBox.base .projectBox.blue {
     width: 50vw;
   }
 }
-/* line 514, ../scss/main.scss */
+/* line 524, ../scss/main.scss */
 html body .theBox.base .projectBox.blue.active {
   transform: translate(0%, -50%);
 }
-/* line 518, ../scss/main.scss */
+/* line 528, ../scss/main.scss */
 html body .theBox.base .projectBox.blue .projectBoxHeading {
   width: 100%;
   height: 30px;
@@ -1100,7 +1109,7 @@ html body .theBox.base .projectBox.blue .projectBoxHeading {
   padding: 0px 10px;
   font-size: 18px;
 }
-/* line 531, ../scss/main.scss */
+/* line 541, ../scss/main.scss */
 html body .theBox.base .projectBox.blue .projectBoxHeading .projectBoxCloseBtn {
   position: absolute;
   right: 0;
@@ -1111,7 +1120,7 @@ html body .theBox.base .projectBox.blue .projectBoxHeading .projectBoxCloseBtn {
   background: #8fb3d7;
   cursor: pointer;
 }
-/* line 541, ../scss/main.scss */
+/* line 551, ../scss/main.scss */
 html body .theBox.base .projectBox.blue .projectBoxHeading .projectBoxCloseBtn svg {
   position: absolute;
   top: 50%;
@@ -1119,21 +1128,21 @@ html body .theBox.base .projectBox.blue .projectBoxHeading .projectBoxCloseBtn s
   transform: translate(-50%, -50%);
   fill: #538AC2;
 }
-/* line 552, ../scss/main.scss */
+/* line 562, ../scss/main.scss */
 html body .theBox.base .projectBox.blue ::-webkit-scrollbar {
   width: 40px;
 }
-/* line 558, ../scss/main.scss */
+/* line 568, ../scss/main.scss */
 html body .theBox.base .projectBox.blue ::-webkit-scrollbar-track {
   background-color: #9ebddd;
   border-left: 2px solid #538AC2;
 }
-/* line 563, ../scss/main.scss */
+/* line 573, ../scss/main.scss */
 html body .theBox.base .projectBox.blue ::-webkit-scrollbar-thumb {
   background-color: #79a4cf;
   border-left: 2px solid #538AC2;
 }
-/* line 567, ../scss/main.scss */
+/* line 577, ../scss/main.scss */
 html body .theBox.base .projectBox.blue .projectContent {
   width: 100%;
   height: 100%;
@@ -1145,7 +1154,7 @@ html body .theBox.base .projectBox.blue .projectContent {
   padding-bottom: 40px;
   position: relative;
 }
-/* line 579, ../scss/main.scss */
+/* line 589, ../scss/main.scss */
 html body .theBox.base .projectBox.blue .projectContent .projectElement {
   width: 70%;
   margin: 20px 0;
@@ -1155,14 +1164,17 @@ html body .theBox.base .projectBox.blue .projectContent .projectElement {
   text-align: center;
   position: relative;
 }
-/* line 587, ../scss/main.scss */
+/* line 600, ../scss/main.scss */
 html body .theBox.base .projectBox.blue .projectContent .projectElement img {
   width: 100%;
   height: auto;
+  -moz-box-shadow: 2px 2px 4px 0px #bbb;
+  -webkit-box-shadow: 2px 2px 4px 0px #bbb;
+  box-shadow: 2px 2px 4px 0px #bbb;
 }
-/* line 492, ../scss/main.scss */
+/* line 502, ../scss/main.scss */
 html body .theBox.base .projectBox.green {
-  position: absolute;
+  position: fixed;
   height: 79vh;
   right: 0;
   top: 50%;
@@ -1178,28 +1190,28 @@ html body .theBox.base .projectBox.green {
   -webkit-transition: all 0.4s ease-in-out;
 }
 @media only screen and (max-width: 768px) {
-  /* line 492, ../scss/main.scss */
+  /* line 502, ../scss/main.scss */
   html body .theBox.base .projectBox.green {
     display: none;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 492, ../scss/main.scss */
+  /* line 502, ../scss/main.scss */
   html body .theBox.base .projectBox.green {
     width: 60vw;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 492, ../scss/main.scss */
+  /* line 502, ../scss/main.scss */
   html body .theBox.base .projectBox.green {
     width: 50vw;
   }
 }
-/* line 514, ../scss/main.scss */
+/* line 524, ../scss/main.scss */
 html body .theBox.base .projectBox.green.active {
   transform: translate(0%, -50%);
 }
-/* line 518, ../scss/main.scss */
+/* line 528, ../scss/main.scss */
 html body .theBox.base .projectBox.green .projectBoxHeading {
   width: 100%;
   height: 30px;
@@ -1212,7 +1224,7 @@ html body .theBox.base .projectBox.green .projectBoxHeading {
   padding: 0px 10px;
   font-size: 18px;
 }
-/* line 531, ../scss/main.scss */
+/* line 541, ../scss/main.scss */
 html body .theBox.base .projectBox.green .projectBoxHeading .projectBoxCloseBtn {
   position: absolute;
   right: 0;
@@ -1223,7 +1235,7 @@ html body .theBox.base .projectBox.green .projectBoxHeading .projectBoxCloseBtn 
   background: #98e7bc;
   cursor: pointer;
 }
-/* line 541, ../scss/main.scss */
+/* line 551, ../scss/main.scss */
 html body .theBox.base .projectBox.green .projectBoxHeading .projectBoxCloseBtn svg {
   position: absolute;
   top: 50%;
@@ -1231,21 +1243,21 @@ html body .theBox.base .projectBox.green .projectBoxHeading .projectBoxCloseBtn 
   transform: translate(-50%, -50%);
   fill: #56D791;
 }
-/* line 552, ../scss/main.scss */
+/* line 562, ../scss/main.scss */
 html body .theBox.base .projectBox.green ::-webkit-scrollbar {
   width: 40px;
 }
-/* line 558, ../scss/main.scss */
+/* line 568, ../scss/main.scss */
 html body .theBox.base .projectBox.green ::-webkit-scrollbar-track {
   background-color: #a8ebc7;
   border-left: 2px solid #56D791;
 }
-/* line 563, ../scss/main.scss */
+/* line 573, ../scss/main.scss */
 html body .theBox.base .projectBox.green ::-webkit-scrollbar-thumb {
   background-color: #7fe1ac;
   border-left: 2px solid #56D791;
 }
-/* line 567, ../scss/main.scss */
+/* line 577, ../scss/main.scss */
 html body .theBox.base .projectBox.green .projectContent {
   width: 100%;
   height: 100%;
@@ -1257,7 +1269,7 @@ html body .theBox.base .projectBox.green .projectContent {
   padding-bottom: 40px;
   position: relative;
 }
-/* line 579, ../scss/main.scss */
+/* line 589, ../scss/main.scss */
 html body .theBox.base .projectBox.green .projectContent .projectElement {
   width: 70%;
   margin: 20px 0;
@@ -1267,14 +1279,17 @@ html body .theBox.base .projectBox.green .projectContent .projectElement {
   text-align: center;
   position: relative;
 }
-/* line 587, ../scss/main.scss */
+/* line 600, ../scss/main.scss */
 html body .theBox.base .projectBox.green .projectContent .projectElement img {
   width: 100%;
   height: auto;
+  -moz-box-shadow: 2px 2px 4px 0px #bbb;
+  -webkit-box-shadow: 2px 2px 4px 0px #bbb;
+  box-shadow: 2px 2px 4px 0px #bbb;
 }
-/* line 492, ../scss/main.scss */
+/* line 502, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli {
-  position: absolute;
+  position: fixed;
   height: 79vh;
   right: 0;
   top: 50%;
@@ -1290,28 +1305,28 @@ html body .theBox.base .projectBox.kapsuli {
   -webkit-transition: all 0.4s ease-in-out;
 }
 @media only screen and (max-width: 768px) {
-  /* line 492, ../scss/main.scss */
+  /* line 502, ../scss/main.scss */
   html body .theBox.base .projectBox.kapsuli {
     display: none;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
-  /* line 492, ../scss/main.scss */
+  /* line 502, ../scss/main.scss */
   html body .theBox.base .projectBox.kapsuli {
     width: 60vw;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 492, ../scss/main.scss */
+  /* line 502, ../scss/main.scss */
   html body .theBox.base .projectBox.kapsuli {
     width: 50vw;
   }
 }
-/* line 514, ../scss/main.scss */
+/* line 524, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli.active {
   transform: translate(0%, -50%);
 }
-/* line 518, ../scss/main.scss */
+/* line 528, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli .projectBoxHeading {
   width: 100%;
   height: 30px;
@@ -1324,7 +1339,7 @@ html body .theBox.base .projectBox.kapsuli .projectBoxHeading {
   padding: 0px 10px;
   font-size: 18px;
 }
-/* line 531, ../scss/main.scss */
+/* line 541, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli .projectBoxHeading .projectBoxCloseBtn {
   position: absolute;
   right: 0;
@@ -1335,7 +1350,7 @@ html body .theBox.base .projectBox.kapsuli .projectBoxHeading .projectBoxCloseBt
   background: #ffd6d6;
   cursor: pointer;
 }
-/* line 541, ../scss/main.scss */
+/* line 551, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli .projectBoxHeading .projectBoxCloseBtn svg {
   position: absolute;
   top: 50%;
@@ -1343,21 +1358,21 @@ html body .theBox.base .projectBox.kapsuli .projectBoxHeading .projectBoxCloseBt
   transform: translate(-50%, -50%);
   fill: #FF8484;
 }
-/* line 552, ../scss/main.scss */
+/* line 562, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli ::-webkit-scrollbar {
   width: 40px;
 }
-/* line 558, ../scss/main.scss */
+/* line 568, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli ::-webkit-scrollbar-track {
   background-color: #ffeaea;
   border-left: 2px solid #FF8484;
 }
-/* line 563, ../scss/main.scss */
+/* line 573, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli ::-webkit-scrollbar-thumb {
   background-color: #ffb7b7;
   border-left: 2px solid #FF8484;
 }
-/* line 567, ../scss/main.scss */
+/* line 577, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli .projectContent {
   width: 100%;
   height: 100%;
@@ -1369,7 +1384,7 @@ html body .theBox.base .projectBox.kapsuli .projectContent {
   padding-bottom: 40px;
   position: relative;
 }
-/* line 579, ../scss/main.scss */
+/* line 589, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli .projectContent .projectElement {
   width: 70%;
   margin: 20px 0;
@@ -1379,8 +1394,11 @@ html body .theBox.base .projectBox.kapsuli .projectContent .projectElement {
   text-align: center;
   position: relative;
 }
-/* line 587, ../scss/main.scss */
+/* line 600, ../scss/main.scss */
 html body .theBox.base .projectBox.kapsuli .projectContent .projectElement img {
   width: 100%;
   height: auto;
+  -moz-box-shadow: 2px 2px 4px 0px #bbb;
+  -webkit-box-shadow: 2px 2px 4px 0px #bbb;
+  box-shadow: 2px 2px 4px 0px #bbb;
 }
