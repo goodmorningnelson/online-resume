@@ -1,11 +1,17 @@
 $app-colors: (
-	'red': (
+	'base': (
 		'base': #DC3E3E,
 		'font': #A7EAE4,
     'border':#B0F0EA,
 	),
-	'yellow': (
-		'base': #FFE275,
-		'secondary': #F3D45E,
+	'blue': (
+		'base': #538AC2,
 	),
+	'green': (
+		'base': #56D791,
+	),
+	'kapsuli': (
+		'base': #FF8484,
+	),
+
 );
