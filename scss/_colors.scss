@@ -1,10 +1,14 @@
 $app-colors: (
 	'base': (
-		'base': #DC3E3E,
+		'base': #9de4de,
 		'font': #9de4de,
     'border':#B0F0EA,
 	),
-
+	'grey': (
+		'base': grey,
+		'font': grey,
+    'border':grey,
+	),
 );
 
 $project-colors: (
@@ -16,6 +20,30 @@ $project-colors: (
 	),
 	'kapsuli': (
 		'base': #FF8484,
+	),
+	'gifhit': (
+		'base': #88C3D6,
+	),
+	'caprice': (
+		'base': #FC7F3F,
+	),
+	'oje': (
+		'base': #9DAAB1,
+	),
+	'ssa': (
+		'base': #F8D756,
+	),
+	'gamoloco': (
+		'base': #7EF3B4,
+	),
+	'mindsail': (
+		'base': #FB76C4,
+	),
+	'spiked': (
+		'base': #93EC5C,
+	),
+	'edantes': (
+		'base': #9D76F6,
 	),
 
 );

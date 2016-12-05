@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="online-resume">
 <head>
-<title>Title of the document</title>
+<title>Thomas Ruehr - Resume</title>
 <link rel="stylesheet" href="css/main.css">
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
@@ -9,10 +9,8 @@
 <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.3.0.js"></script>
 <script src="js/app.js"></script>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-
-
 <script src="js/app.js" type="text/javascript"></script>
+<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
 <body>
@@ -30,7 +28,7 @@
         </div>
       </div>
       <div class="descriptionBox">
-        French/american graphic designer with a passion for design. Avid learner and tech-entousiast. Young, fast and curious, I like to follow a project from its original concept to its graphical realisation taking at heart all the technical aspects related to it. I love the puzzles that come with each ideas.
+        French/american graphic designer with a passion for building things. From a complexe web architecture to a simple Ikea shelf. I am an avid leaner and tech-enthusiast. I love the puzzles that come with each project. Allowing me to challenge myself, learning and growing as a visual designer. And also ! a video-game lover, dancer and a book nerd at heart.
       </div>
     </div>
 
@@ -38,10 +36,24 @@
       <div class="infoBox">
         <div class="infoItem">
           <div class="infoItemHeading" ng-model="infoItemModel1" uib-btn-checkbox>
+            <div class="infoItemTitle">Contact</div>
+            <div class="infoItemHandle"></div>
+          </div>
+          <div class="infoItemBody">
+            <h3>Email</h3>
+            <p>mtr.ruehr@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="infoItem">
+          <div class="infoItemHeading" ng-model="infoItemModel2" uib-btn-checkbox>
             <div class="infoItemTitle">Skills</div>
             <div class="infoItemHandle"></div>
           </div>
           <div class="infoItemBody">
+            <h3>Languages</h3>
+            <p>French</p>
+            <p>English</p>
             <h3>Design Tools:</h3>
             <p>Sketch</p>
             <p>Photoshop</p>
@@ -61,17 +73,32 @@
 
         </div>
         <div class="infoItem">
-          <div class="infoItemHeading" ng-model="infoItemModel2" uib-btn-checkbox >
+          <div class="infoItemHeading" ng-model="infoItemModel3" uib-btn-checkbox >
             <div class="infoItemTitle">Education</div>
             <div class="infoItemHandle"></div>
           </div>
           <div class="infoItemBody">
-            <h3>• 2014</h3>
+            <h3>+ 2014</h3>
             <p>Advanced Bachelor in Graphique Design and Art Direction.</br> EPSAA - École Professionnelle Supérieure d’Arts et d’Architecture de la Ville de Paris </p>
-            <h3>• 2012</h3>
+            <h3>+ 2012</h3>
             <p>ChildCare Worker Certification. </br>«Brevet d’aptitude aux fonctions d’animateur» (BAFA)</p>
-            <h3>• 2009 </h3>
+            <h3>+ 2009 </h3>
             <p>French Baccalauréat </br>Specialised in Social Studies and Economy. </br>Honorable Mention.</p>
+          </div>
+
+        </div>
+        <div class="infoItem">
+          <div class="infoItemHeading" ng-model="infoItemModel4" uib-btn-checkbox >
+            <div class="infoItemTitle">Hobbies</div>
+            <div class="infoItemHandle"></div>
+          </div>
+          <div class="infoItemBody">
+            <h3></h3>
+            <p>Dancing</p>
+            <p>Video Games</p>
+            <p>Learning</p>
+            <p>Building stuff</p>
+            <p>tabletop games</p>
           </div>
 
         </div>
@@ -98,12 +125,14 @@
             <p>Media Campaign Design</p>
             <p>Worflow protocol implementation</p>
             <div class="projectAccessBox">
-              <div class="projectViewBtn website">Access Website
-                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
-                </svg>
-              </div>
+              <a href="http://kapsuli.com/" target="_blank">
+                <div class="projectViewBtn website">Access Website
+                  <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
+                </div>
+              </a>
               <div class="projectViewBtn project" ng-model="projectKapsuliModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
                 <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0h24v24H0z" fill="none"/>
@@ -116,11 +145,83 @@
 
 <!-- kapsuli end -->
 
-        <div class="workItem blue">
-          <div class="workItemHeading" ng-model="workItemModel2" uib-btn-checkbox >
+<!-- ssa start -->
+        <div class="workItem ssa">
+          <div class="workItemHeading" ng-model="workItemModel1" uib-btn-checkbox >
             <div class="date">2015</div>
-            <div class="title">Spitzer School of Architecture</div>
-            <div class="miniDescription">Webdesign</div>
+            <div class="title">The Spitzer School of Architecture</div>
+            <div class="miniDescription">WebDesign</div>
+            <div class="workItemHandleBox">
+              <div class="workItemHandle"></div>
+            </div>
+          </div>
+          <div class="workItemBody">
+            <p>Front-End development</p>
+            <p>User Interface Design</p>
+            <p>Template (psd)</p>
+            <p>work protocol Implementation</p>
+            <div class="projectAccessBox">
+              <a href="https://ssa.ccny.cuny.edu/" target="_blank">
+                <div class="projectViewBtn website">Access Website
+                  <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
+                </div>
+              </a>
+              <div class="projectViewBtn project" ng-model="projectSsaModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
+                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- ssa end -->
+
+<!-- ssa start -->
+        <div class="workItem spiked">
+          <div class="workItemHeading" ng-model="workItemModel1" uib-btn-checkbox >
+            <div class="date">2015</div>
+            <div class="title">Spiked</div>
+            <div class="miniDescription">User Interface design & asset creation</div>
+            <div class="workItemHandleBox">
+              <div class="workItemHandle"></div>
+            </div>
+          </div>
+          <div class="workItemBody">
+            <p>User Interface design</p>
+            <p>Vector asset creation</p>
+            <p>CSS implementation</p>
+            <p>Banner creation</p>
+            <div class="projectAccessBox">
+              <a href="http://www.spiked-online.com/" target="_blank">
+                <div class="projectViewBtn website">Access Website
+                  <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
+                </div>
+              </a>
+              <div class="projectViewBtn project" ng-model="projectSpiModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
+                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- ssa end -->
+
+<!-- gifhit start -->
+
+        <div class="workItem gifhit">
+          <div class="workItemHeading" ng-model="workItemModel1" uib-btn-checkbox >
+            <div class="date">2015</div>
+            <div class="title">Gif Hit</div>
+            <div class="miniDescription">Musical Gif - Creation tool</div>
             <div class="workItemHandleBox">
               <div class="workItemHandle">
 
@@ -128,15 +229,156 @@
             </div>
           </div>
           <div class="workItemBody">
-            <p>hello</p>
-            <p>hello</p>
+            <p>Market Research</p>
+            <p>User Experience analysis</p>
+            <p>Brand Identity</p>
+            <p>User Interface Design</p>
+            <p>Front-End development</p>
+            <div class="projectAccessBox">
+              <div class="projectViewBtn project" ng-model="projectGifModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
+                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="workItem green">
-          <div class="workItemHeading" ng-model="workItemModel3" uib-btn-checkbox >
-            <div class="date">2015/2016</div>
-            <div class="title">Kapsuli</div>
-            <div class="miniDescription">Social media tool for twitch broadcasters</div>
+
+<!-- gifhit end -->
+
+<!-- gamoloco start -->
+
+        <div class="workItem gamoloco">
+          <div class="workItemHeading" ng-model="workItemModel1" uib-btn-checkbox >
+            <div class="date">2015</div>
+            <div class="title">Gamoloco</div>
+            <div class="miniDescription">Web Design & vector asset creation</div>
+            <div class="workItemHandleBox">
+              <div class="workItemHandle"></div>
+            </div>
+          </div>
+          <div class="workItemBody">
+            <p>UX/UI design</p>
+            <p>Vector asset creation</p>
+            <p>Pricing Page Design</p>
+            <div class="projectAccessBox">
+              <a href="https://gamoloco.com/" target="_blank">
+                <div class="projectViewBtn website">Access Website
+                  <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
+                </div>
+              </a>
+              <div class="projectViewBtn project" ng-model="projectGamModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
+                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- gamoloco end -->
+
+<!-- mindsail start -->
+
+        <div class="workItem mindsail">
+          <div class="workItemHeading" ng-model="workItemModel1" uib-btn-checkbox >
+            <div class="date">2015</div>
+            <div class="title">Mindsail</div>
+            <div class="miniDescription">Meditation App prototyping</div>
+            <div class="workItemHandleBox">
+              <div class="workItemHandle"></div>
+            </div>
+          </div>
+          <div class="workItemBody">
+            <p>User Interface design</p>
+            <p>Visual assets creation</p>
+            <p>User Experience research</p>
+            <p>Prototyping (proto.io)</p>
+            <div class="projectAccessBox">
+              <div class="projectViewBtn project" ng-model="projectMindModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
+                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- mindsail end -->
+
+<!-- oje start -->
+
+        <div class="workItem oje">
+          <div class="workItemHeading" ng-model="workItemModel1" uib-btn-checkbox >
+            <div class="date">2014</div>
+            <div class="title">OJE</div>
+            <div class="miniDescription">Augmented reality glasses for Bang&Olufsen</div>
+            <div class="workItemHandleBox">
+              <div class="workItemHandle"></div>
+            </div>
+          </div>
+          <div class="workItemBody">
+            <p>Brand identity</p>
+            <p>Web user interface</p>
+            <p>Print Design</p>
+            <p>Packaging concept</p>
+            <p>Commercial space concept</p>
+            <div class="projectAccessBox">
+              <div class="projectViewBtn project" ng-model="projectOjeModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
+                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- oje end -->
+
+<!-- edantes start -->
+
+        <div class="workItem edantes">
+          <div class="workItemHeading" ng-model="workItemModel1" uib-btn-checkbox >
+            <div class="date">2014</div>
+            <div class="title">E-Dantes / internship</div>
+            <div class="miniDescription">E-Publication</div>
+            <div class="workItemHandleBox">
+              <div class="workItemHandle"></div>
+            </div>
+          </div>
+          <div class="workItemBody">
+            <p>Graphic Design</p>
+            <p>Epub branding identity</p>
+            <p>UI Design</p>
+            <p>Development ready visual assets</p>
+            <p>Illustration</p>
+            <div class="projectAccessBox">
+              <div class="projectViewBtn project" ng-model="projectDanModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
+                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- edantes end -->
+
+<!-- caprice start -->
+
+        <div class="workItem caprice">
+          <div class="workItemHeading" ng-model="workItemModel1" uib-btn-checkbox >
+            <div class="date">2014</div>
+            <div class="title">Caprice</div>
+            <div class="miniDescription">Icone creation - App design</div>
             <div class="workItemHandleBox">
               <div class="workItemHandle">
 
@@ -144,15 +386,35 @@
             </div>
           </div>
           <div class="workItemBody">
-            <p>hello</p>
+            <p>Brand identity</p>
+            <p>Vector graphical assets creation</p>
+            <p>UI design</p>
+            <div class="projectAccessBox">
+              <div class="projectViewBtn project" ng-model="projectCapriceModel" uib-Btn-Checkbox btn-checkbox-true="1" btn-checkbox-false="0">look at the project
+                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
+
+<!-- caprice end -->
+
+
+
+
+
       </div>
     </div>
 
+
 <!-- project view boxes -->
 
-    <div class="projectBoxOverlay" ng-show="projectKapsuliModel === 1" ng-click="projectKapsuliModel = 0"></div>
+    <div class="projectBoxOverlay" ng-show="projectKapsuliModel === 1 || projectGifModel === 1 || projectCapriceModel === 1 || projectOjeModel === 1 || projectSsaModel === 1 || projectGamModel === 1 || projectMindModel === 1 || projectSpiModel === 1 || projectDanModel === 1" ng-click="projectKapsuliModel = 0"></div>
+
+    <!-- kapsuli start -->
     <div class="projectBox kapsuli" ng-class="{'active': projectKapsuliModel === 1}">
       <div class="projectBoxHeading"> Kapsuli
         <div class="projectBoxCloseBtn" ng-click="projectKapsuliModel = 0">
@@ -164,19 +426,348 @@
       </div>
       <div class="projectContent">
         <div class="projectElement">
-          This project is awsome, hell yeah, I did it on my own, Imma boss :D
+          Two friends and I founded Kapsuli. The first social media tool for Twitch broadcaster. The project started in late 2015, it provides a powerful tool for Twitch broadcaster to maintain a continuous and powerful social media presence while streaming.
+        </div>
+        <div class="projectElement">
+          <img src="./img/kap9.png" alt="">
         </div>
         <div class="projectElement">
           <img src="./img/kap1.png" alt="">
         </div>
+
         <div class="projectElement">
-          <img src="./img/kap2.png" alt="">
+          <img src="./img/kap4.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/kap5.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/kap6.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/kap7.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/kap8.png" alt="">
+          <div class="notes">A friend to guide you through the interface.</div>
+        </div>
+
+        <div class="projectElement">
+          <img src="./img/kap3.png" alt="">
         </div>
       </div>
-
-
     </div>
+    <!-- kapsuli end -->
 
+    <!-- gifhit start -->
+    <div class="projectBox gifhit" ng-class="{'active': projectGifModel === 1}">
+      <div class="projectBoxHeading"> GifHit
+        <div class="projectBoxCloseBtn" ng-click="projectGifModel = 0">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="projectElement">
+          Two friends and I founded Kapsuli. The first social media tool for Twitch broadcaster. The project started in late 2015, it provides a powerful tool for Twitch broadcaster to maintain a continuous and powerful social media presence while streaming.
+        </div>
+        <div class="projectElement">
+          <img src="./img/gif1.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gif2.jpg" alt="">
+        </div>
+
+        <div class="projectElement">
+          <img src="./img/gif3.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gif4.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gif5.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gif6.jpg" alt="">
+        </div>
+
+      </div>
+    </div>
+    <!-- gifhit end -->
+
+    <!-- caprice start -->
+    <div class="projectBox caprice" ng-class="{'active': projectCapriceModel === 1}">
+      <div class="projectBoxHeading"> GifHit
+        <div class="projectBoxCloseBtn" ng-click="projectCapriceModel = 0">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="projectElement">
+          Concept Design for an app targeted at pregnant women. The purpose in this excercise was to create an identity going against current canon for this target audience.
+        </div>
+        <div class="projectElement">
+          <img src="./img/cap1.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/cap2.jpg" alt="">
+        </div>
+
+        <div class="projectElement">
+          <img src="./img/cap4.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/cap3.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/cap6.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/cap7.gif" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/cap5.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- caprice end -->
+
+    <!-- oje start -->
+    <div class="projectBox oje" ng-class="{'active': projectOjeModel === 1}">
+      <div class="projectBoxHeading"> OJE
+        <div class="projectBoxCloseBtn" ng-click="projectOjeModel = 0">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="projectElement">
+          Concept Design for a new line of product of Bang&Olufsen.
+        </div>
+        <div class="projectElement">
+          <img src="./img/oje1.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/oje2.jpg" alt="">
+        </div>
+
+        <div class="projectElement">
+          <img src="./img/oje3.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/oje4.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/oje5.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/oje6.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/oje7.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- oje end -->
+
+    <!-- oje start -->
+    <div class="projectBox ssa" ng-class="{'active': projectSsaModel === 1}">
+      <div class="projectBoxHeading"> The Spitzer School of Architecture
+        <div class="projectBoxCloseBtn" ng-click="projectSsaModel = 0">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="projectElement">
+          Web Development with Prithi Gowda and Ian Foster. New website for the Spitzer School of Architecture.
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa1.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa2.jpg" alt="">
+        </div>
+
+        <div class="projectElement">
+          <img src="./img/ssa3.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa4.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa5.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa6.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa7.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa8.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa9.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa10.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa11.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/ssa12.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- oje end -->
+    <!-- gamoloco start -->
+    <div class="projectBox gamoloco" ng-class="{'active': projectGamModel === 1}">
+      <div class="projectBoxHeading"> Gamoloco
+        <div class="projectBoxCloseBtn" ng-click="projectGamModel = 0">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="projectElement">
+          For this project I had to design the pricing page for the website Gamoloco as well as designing vector assets for them. This company does data tracking for the streaming industry, monitoring the activity of thousands of online broadcaster.
+        </div>
+        <div class="projectElement">
+          <img src="./img/gam1.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gam2.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gam3.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gam4.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gam5.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gam6.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/gam7.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- gamoloco end -->
+    <!-- mindsail start -->
+    <div class="projectBox mindsail" ng-class="{'active': projectMindModel === 1}">
+      <div class="projectBoxHeading"> Mindsail
+        <div class="projectBoxCloseBtn" ng-click="projectMindModel = 0">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="projectElement">
+          Creation of a prototype for a meditation app : Mindsail.
+        </div>
+        <div class="projectElement">
+          <img src="./img/mind1.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/mind2.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/mind3.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/mind4.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/mind5.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/mind6.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- mindsail end -->
+    <!-- mindsail start -->
+    <div class="projectBox spiked" ng-class="{'active': projectSpiModel === 1}">
+      <div class="projectBoxHeading"> Spiked
+        <div class="projectBoxCloseBtn" ng-click="projectSpiModel = 0">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="projectElement">
+          Spiked is an online publication, they advocate freedom of speech in every shape or form. I designed a page to help represent freespeech on campus, as well as creating banners and other asset (infographic etc.) for their socia media outreach.
+        </div>
+        <div class="projectElement">
+          <img src="./img/spi1.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/spi2.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/spi3.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/spi4.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/spi5.png" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/spi6.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- mindsail end -->
+    <!-- edantes start -->
+    <div class="projectBox edantes" ng-class="{'active': projectDanModel === 1}">
+      <div class="projectBoxHeading"> E-Dantes / Internship
+        <div class="projectBoxCloseBtn" ng-click="projectDanModel = 0">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="projectElement">
+          E-Dantes is a company focused on E-Publication, mainly with her parent company, Bragelonne Publishing. They specialize in Heroïc-Fantasy litterature and Science-Fiction.
+        </div>
+        <div class="projectElement">
+          <img src="./img/dan1.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/dan2.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/dan3.jpg" alt="">
+        </div>
+        <div class="projectElement">
+          <img src="./img/dan4.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- edantes end -->
   </div>
 </body>
 </html>
