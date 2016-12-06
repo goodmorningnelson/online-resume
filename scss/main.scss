@@ -309,6 +309,7 @@ html {
                       padding: 4px 10px;
                       font-size: 13px;
                       background-color: lighten($p-base-color, 5%);
+                      flex-shrink: 0;
                     }
 
                     .title {
