@@ -4,6 +4,7 @@
 @import "_typography";
 @import "_colors";
 @import "_responsive";
+@import "_mixins";
 @import "bootstrap.min.css";
 
 * {
@@ -40,6 +41,7 @@ html {
     overflow-x: hidden;
 
 
+
     @each $color-key, $color-variants in $app-colors {
       $c-base-color: map-get($color-variants, "base");
       $c-font-color: map-get($color-variants, "font");
@@ -58,7 +60,7 @@ html {
           background-position: 0 0, 20px 20px;
 
 
-          display: flex;
+          @include flexbox();
           flex-direction: column;
           align-items: center;
 
@@ -86,7 +88,7 @@ html {
             margin: 50px 0 30px 0;
             background-color: #fff;
 
-            display: flex;
+            @include flexbox();
             flex-shrink: 0;
 
             transition: all 0.5s ease;
@@ -101,8 +103,8 @@ html {
               transition: all 0.5s ease;
 
               @include respond-to(handhelds) { width: 90vw; height: 100px;}
-              @include respond-to(medium-screens) { width: 320px;}
-              @include respond-to(wide-screens) { width: 320px;}
+              @include respond-to(medium-screens) { width: 320px; height: 134px;}
+              @include respond-to(wide-screens) { width: 320px; height: 100px;}
 
               .name {
                 width: 100%;
@@ -170,7 +172,7 @@ html {
             //background: blue;
             //margin: 10px;
 
-            display: flex;
+            @include flexbox();
 
             transition: all 0.5s ease;
 
@@ -298,7 +300,7 @@ html {
                     border: 2px solid $p-base-color;
                     overflow: hidden;
 
-                    display: flex;
+                    @include flexbox();
 
                     .date {
                       height: 100%;
@@ -403,7 +405,7 @@ html {
                       position: absolute;
                       right: 0;
                       bottom: 0;
-                      display: flex;
+                      @include flexbox();
                       flex-direction: column;
                       width: 186px;
                       border: 2px solid $p-base-color;
@@ -522,7 +524,8 @@ html {
               border-top: 2px solid $p-base-color;
               border-left: 2px solid $p-base-color;
               border-bottom: 2px solid $p-base-color;
-              display: flex;
+
+              @include flexbox();
               flex-direction: column;
               overflow: hidden;
 
@@ -590,12 +593,14 @@ html {
                 width: 100%;
                 height: 100%;
                 overflow-y: auto;
-                display: flex;
+                @include flexbox();
                 flex-direction: column;
                 align-items: center;
                 padding-top: 22px;
                 padding-bottom: 40px;
                 position: relative;
+
+
 
 
                 .projectElement {
@@ -606,6 +611,7 @@ html {
                   font-size: 14px;
                   //text-align: center;
                   position: relative;
+                  -webkit-flex-shrink: 0;
 
                   .notes {
                     position: absolute;
