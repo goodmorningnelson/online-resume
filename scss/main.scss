@@ -12,6 +12,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
+  //font-family: arial !important;
   //-webkit-user-select: none;
 
   ::selection {
@@ -63,6 +64,8 @@ html {
           @include flexbox();
           flex-direction: column;
           align-items: center;
+
+          .fonthack {display: none;}
 
           .smallBox {
             width: 100px;
@@ -118,7 +121,7 @@ html {
                   top:50%;
                   left: 50%;
                   transform: translate(-50%,-50%);
-                  font-family: 'source code pro';
+                  font-family: 'Source Code Pro', monospace;
                   font-size: 39px;
                   color: $c-font-color;
                   font-weight: 700;
@@ -134,7 +137,7 @@ html {
                 position: relative;
 
                 h2 {
-                  font-family: 'source code pro';
+                  font-family: 'Source Code Pro', monospace;
                   font-size: 90%;
                   color: $c-font-color;
                   font-weight: 600;
@@ -154,7 +157,7 @@ html {
               border-bottom: 2px solid $c-border-color;
 
               padding: 14px 18px;
-              font-family: 'source code pro';
+              font-family: 'Source Code Pro', monospace;
               color: $c-font-color;
               font-size: 12px;
 
@@ -207,7 +210,7 @@ html {
                   border: 2px solid $c-border-color;
 
                   .infoItemTitle {
-                    font-family: 'source code pro';
+                    font-family: 'Source Code Pro', monospace;
                     font-weight: 700;
                     font-size: 18px;
                     position: absolute;
@@ -248,7 +251,7 @@ html {
                   border-left: 2px solid $c-border-color;
                   border-right: 2px solid $c-border-color;
                   color: $c-font-color;
-                  font-family: 'source code pro';
+                  font-family: 'Source Code Pro', monospace;
                   padding: 0;
 
 
@@ -288,7 +291,7 @@ html {
                   overflow: hidden;
                   margin-bottom: 10px;
                   background-color: #fff;
-                  font-family: 'source code pro';
+                  font-family: 'Source Code Pro', monospace;
                   color: saturate(shade($p-base-color, 10%),10%);
 
                   transition: all 0.5s linear;
@@ -566,7 +569,7 @@ html {
                 border-bottom: 2px solid $p-base-color;
                 position: relative;
                 background-color: lighten($p-base-color, 20%);
-                font-family: 'source code pro';
+                font-family: 'Source Code Pro', monospace;
                 color: $p-base-color;
                 font-weight: 700;
                 padding: 0px 10px;
@@ -626,7 +629,7 @@ html {
                 .projectElement {
                   width: 80%;
                   margin: 20px 0;
-                  font-family: 'source code pro';
+                  font-family: 'Source Code Pro', monospace;
                   color: $p-base-color;
                   font-size: 14px;
                   //text-align: center;
@@ -638,7 +641,7 @@ html {
                     bottom: -22px;
                     left: 50%;
                     transform: translateX(-50%);
-                    font-family: 'source code pro';
+                    font-family: 'Source Code Pro', monospace;
                     font-size: 11px;
                     color: transparentize($p-base-color, 0.2);
                     text-align: center;
